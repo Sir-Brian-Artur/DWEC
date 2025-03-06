@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Datos del Formulario</title>
+</head>
+<body>
+  <h1>Datos Ingresados</h1>
+  <div id="datos"></div>
+  
+  <script>
+    // Extraemos los parámetros de la URL
+    const params = new URLSearchParams(window.location.search);
+    const nombre = params.get('nombre') || 'N/A';
+    const apellidos = params.get('apellidos') || 'N/A';
+    const edad = params.get('edad') || 'N/A';
+    const correo = params.get('correo') || 'N/A';
+    const contrasena = params.get('contrasena') || 'N/A';
+    
+    // Mostramos los datos en el elemento con id "datos"
+    document.getElementById('datos').innerHTML = `
+      <p><strong>Nombre:</strong> ${nombre}</p>
+      <p><strong>Apellidos:</strong> ${apellidos}</p>
+      <p><strong>Edad:</strong> ${edad}</p>
+      <p><strong>Correo electrónico:</strong> ${correo}</p>
+      <p><strong>Contraseña:</strong> ${contrasena}</p>
+    `;
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="correoInput" placeholder="ejemplo@dominio.com">
+    <button onclick="validarCorreo()">Botón</button>
+    <p id="resultado"></p>
+    <script>
+        function validarCorreo() {
+            const correo = document.getElementById("correoInput").value;
+            const telfEsp = /(\+34|0034|34)?[ -]*(6|7)[ -]*([0-9][ -]*){8}/;
+            const regCorreo = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+            document.getElementById("resultado").innerHTML = regCorreo.test(correo)
+                ? "El número de teléfono es válido"
+                : "El número de teléfono no es correcto";
+        }
+    </script>
+</body>
+
+
+</html>
