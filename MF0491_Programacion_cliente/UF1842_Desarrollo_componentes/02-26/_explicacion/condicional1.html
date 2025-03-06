@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+            function alerta(){
+                var mensaje;
+                let opcion = confirm ("Confirma que eres mayor de edad");
+                if (opcion == true){
+                    mensaje = ("bienvenido a la web");
+                }else{
+                    mensaje = ("debes abandonar de inmediato la web");
+                }
+                document.getElementById("ejemplo").innerHTML = mensaje;
+            }
+    </script>
+</head>
+<body>
+ <p id="ejemplo">Declaracion de derechos</p> 
+ <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa veniam, neque quis illo temporibus aut nesciunt autem fugit unde? Nam error molestias mollitia vitae quae libero nisi delectus voluptatum quo?</p>  
+ <button onclick="alerta()">Pulsa si estas de acuerdo</button>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+    <button onclick="mostrarConcatenacion()">Concatenar Arrays</button>
+    <p id="resultado"></p>
+
+    <script>
+        // Concatenar 2 arrays
+        function concatenarArrays(array1, array2) {
+            return array1.concat(array2);
+        }
+
+        function mostrarConcatenacion() {
+            let arr1 = ["lunes","martes","miercoles","jueves","viernes"];
+            let arr2 = ["sábado", "domingo"];
+            let resultado = concatenarArrays(arr1, arr2);
+
+            document.getElementById("resultado").textContent = "Resultado: " + resultado.join(", ");
+        }
+    </script>
+
+</body>
+
+</html>

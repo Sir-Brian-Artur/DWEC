@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo Oscuro con localStorage</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .container {
+            padding: 50px;
+        }
+
+        /* Botón */
+        .toggle-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            background: #007bff;
+            color: white;
+            margin-top: 20px;
+        }
+
+        /* Modo oscuro */
+        .dark-mode {
+            background: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Modo Oscuro con localStorage</h1>
+        <p>Haz clic en el botón para activar o desactivar el modo oscuro.</p>
+        <button class="toggle-btn" onclick="toggleModo()">Activar Modo Oscuro</button>
+    </div>
+
+    <script>
+        // Verifica si ya se ha guardado la preferencia en localStorage
+        if (!localStorage.getItem("modoOscuro")) {
+            localStorage.setItem("modoOscuro", "false");
+        }
+
+        function activarModoOscuro() {
+            document.body.classList.add("dark-mode");
+            localStorage.setItem("modoOscuro", "true");
+            document.querySelector(".toggle-btn").textContent = "Desactivar Modo Oscuro";
+        }
+
+        function desactivarModoOscuro() {
+            document.body.classList.remove("dark-mode");
+            localStorage.setItem("modoOscuro", "false");
+            document.querySelector(".toggle-btn").textContent = "Activar Modo Oscuro";
+        }
+
+        function toggleModo() {
+            if (localStorage.getItem("modoOscuro") === "true") {
+                desactivarModoOscuro();
+            } else {
+                activarModoOscuro();
+            }
+        }
+
+        // Aplica la configuración guardada al cargar la página
+        if (localStorage.getItem("modoOscuro") === "true") {
+            activarModoOscuro();
+        }
+    </script>
+
+</body>
+</html>

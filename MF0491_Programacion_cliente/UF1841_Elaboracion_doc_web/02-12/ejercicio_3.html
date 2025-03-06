@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagenes</title>
+</head>
+<hoal></hoal>
+<body>
+    <img src="media/trooper-300.jpg" 
+        alt="Stormtrooper de perfil"  
+        sizes="(max-width > 300px) 300px, (max-width > 600px) 600px, (max-width > 900px) 900px" 
+        srcset="/media/trooper-300.jpg 300w, trooper-600.jpg 600w, trooper-900.jpg 900w">
+    <img src="media/trooper-900.jpg" alt="Stormtrooper de perfil" usemap="#mapa">
+    <map name="mapa">
+        <area shape="rect" coords="34,44,170,150" href="https://es.wikipedia.org/wiki/Star_Wars" alt="">
+    </map>
+    <br>
+    <img src="media/Stormtrooper.png" alt="Stormtrooper de perfil" width="60%" height="60%">
+
+    <img src="media/trooper.jpg" alt="Stormtrooper de perfil" width="60%" height="60%"
+        srcset="media/Stormtrooper_s.jpg 500w" sizes="(max-width: 600px) 500px">
+    <img src="media/Stormtrooper.webp" alt="Stormtrooper de perfil" width="60%" height="60%">
+    <!-- <img src="media/Stormtrooper.gif" alt="Stormtrooper de perfil" width="60%" height="60%"> -->
+</body>
+
+</html>

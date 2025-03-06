@@ -1,0 +1,136 @@
+/* Estilos generales */
+body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   line-height: 1.6;
+   color: #333;
+}
+
+header {
+   background: #333;
+   color: #fff;
+   padding: 10px 0;
+   text-align: center;
+}
+
+header .logo h1 {
+   margin: 0;
+}
+
+nav ul {
+   list-style: none;
+   padding: 0;
+}
+
+nav ul li {
+   display: inline;
+   margin: 0 15px;
+}
+
+nav ul li a {
+   color: #fff;
+   text-decoration: none;
+}
+
+.portada {
+   background: url('gym-portada.jpg') no-repeat center center/cover;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #fff;
+   text-align: center;
+}
+
+.portada-content h2 {
+   font-size: 3em;
+   margin: 0;
+}
+
+.portada-content p {
+   font-size: 1.5em;
+   margin: 20px 0;
+}
+
+.btn {
+   background: #ff6f61;
+   color: #fff;
+   padding: 10px 20px;
+   text-decoration: none;
+   border-radius: 5px;
+}
+
+.descripcion, .horarios, .ejercicios, .monitores, .contacto {
+   padding: 50px 20px;
+   text-align: center;
+}
+
+.horarios table {
+   width: 100%;
+   max-width: 600px;
+   margin: 0 auto;
+   border-collapse: collapse;
+}
+
+.horarios table th, .horarios table td {
+   border: 1px solid #ddd;
+   padding: 10px;
+}
+
+.ejercicios-grid, .monitores-grid {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   margin-top: 20px;
+}
+
+.ejercicio, .monitor {
+   flex: 1 1 30%;
+   margin: 10px;
+   padding: 20px;
+   background: #f4f4f4;
+   border-radius: 5px;
+}
+
+.monitor img {
+   width: 100%;
+   height: auto;
+   border-radius: 50%;
+}
+
+.contacto form {
+   max-width: 600px;
+   margin: 0 auto;
+   text-align: left;
+}
+
+.contacto label {
+   display: block;
+   margin: 10px 0 5px;
+}
+
+.contacto input, .contacto textarea {
+   width: 100%;
+   padding: 10px;
+   margin-bottom: 10px;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+}
+
+.contacto button {
+   background: #333;
+   color: #fff;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+footer {
+   background: #333;
+   color: #fff;
+   text-align: center;
+   padding: 20px 0;
+   margin-top: 50px;
+}

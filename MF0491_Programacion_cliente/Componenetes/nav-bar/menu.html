@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Navegación Horizontal</title>
+    <style>
+        /* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+/* Estilos para la lista de navegación */
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilos para cada ítem de la lista */
+.nav-item {
+    margin: 0 15px;
+}
+
+/* Estilos para los enlaces */
+.nav-link {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+/* Cambio de color al pasar el ratón sobre los enlaces */
+.nav-link:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href="#inicio" class="nav-link">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a href="#servicios" class="nav-link">Servicios</a>
+            </li>
+            <li class="nav-item">
+                <a href="#nosotros" class="nav-link">Nosotros</a>
+            </li>
+            <li class="nav-item">
+                <a href="#portafolio" class="nav-link">Portafolio</a>
+            </li>
+            <li class="nav-item">
+                <a href="#contacto" class="nav-link">Contacto</a>
+            </li>
+        </ul>
+    </nav>
+</body>
+
+</html>

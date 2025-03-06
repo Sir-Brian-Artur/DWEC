@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horario</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        th {
+            background-color: #333;
+            color: white;
+        }
+        .event-1 { background-color: #FFD700; }
+        .event-2 { background-color: #87CEEB; }
+        .event-3 { background-color: #90EE90; }
+    </style>
+</head>
+<body>
+    <h2>Horario Semanal</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Hora</th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miércoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>9:00 - 10:30</td>
+                <td class="event-1">Evento A</td>
+                <td class="event-2">Evento B</td>
+                <td class="event-3">Evento C</td>
+                <td class="event-1">Evento A</td>
+                <td class="event-2">Evento B</td>
+            </tr>
+            <tr>
+                <td>10:30 - 12:00</td>
+                <td class="event-2">Evento B</td>
+                <td class="event-3">Evento C</td>
+                <td class="event-1">Evento A</td>
+                <td class="event-2">Evento B</td>
+                <td class="event-3">Evento C</td>
+            </tr>
+            <tr>
+                <td>12:00 - 13:30</td>
+                <td class="event-3">Evento C</td>
+                <td class="event-1">Evento A</td>
+                <td class="event-2">Evento B</td>
+                <td class="event-3">Evento C</td>
+                <td class="event-1">Evento A</td>
+            </tr>
+            <tr>
+                <td>13:30 - 15:00</td>
+                <td class="event-1">Evento A</td>
+                <td class="event-2">Evento B</td>
+                <td class="event-3">Evento C</td>
+                <td class="event-1">Evento A</td>
+                <td class="event-2">Evento B</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

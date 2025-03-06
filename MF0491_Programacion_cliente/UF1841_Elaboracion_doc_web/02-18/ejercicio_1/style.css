@@ -1,0 +1,58 @@
+body{
+    font-family: "roboto mono", monospace, arial, sans-serif;
+}
+.galeria{
+    /* Todo se resume en colocar "wrap" cuando se emplee "flex" */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    background-color: #dce8ed;
+}
+.card{
+    margin: 12px 8px;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px #a7a7a7;
+    background-color: #fff;
+}
+img{
+    background-color: #f1f1f1;
+    border-radius: 12px;
+    max-width: 300px;
+}
+.number{
+    font-weight: 700;
+    font-size: 100%;
+    margin-block: 0px;
+    margin-left: 8px;
+    padding-top: 0px;
+    color: #919191;
+}
+.name{
+    margin-top: 16px;
+    font-size: 1.4rem;
+    margin-left: 8px;
+    color: #313131;
+    margin-bottom: 5px;
+}
+.type-content{
+    font-weight: 700;
+    margin: 8px;
+    display: flex;
+    gap: 4px;
+}
+.type{
+    font-size: 14px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 4px 38px;
+}
+.grass{
+    background-color: #9bcc50;
+    color: #212121;
+}
+.poison{
+    background-color: #b97fc9;
+    color: #fff;
+}

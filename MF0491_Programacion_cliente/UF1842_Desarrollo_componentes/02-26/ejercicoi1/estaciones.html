@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- placeholder es el texto gris que aparece en el cajón de escritura -->
+    <input type="text" id="number" placeholder="Escribe un mes">
+    <button onclick="comprobarValor()">click</button>
+    <p>
+        <p id="resultado"></p>
+        <p id="resEst"></p>
+    </p>
+
+    <script>
+
+        function comprobarValor() {
+            // Obtiene el valor como string
+            let mes = document.getElementById("number").value;
+            let mesMinus = mes.toLowerCase(); // Pasa a minusculas
+            let year = [
+                ["diciembre", "enero", "febrero"],
+                ["marzo", "abril", "mayo"],     // Matriz bidimensional
+                ["junio", "julio", "agosto"],
+                ["septiembre", "octubre", "noviembre"]
+            ]
+            let est = ["invierno", "primavera", "verano", "otoño"]
+            let resulMes = "Mes no encontrado";
+            let resulEst;
+            let vuelta = 0;
+            for (let i = 0; i < year.length; i++) {
+                for (let j = 0; j < year[i].length; j++) {
+                    if (mesMinus == year[i][j]) {
+                        resulMes = year[i][j];
+                        resulEst = est[i];
+                    }
+                }
+                console.log(++vuelta)
+            }
+
+            console.log(resulMes);
+
+            // Operador "+=" agrega contenido al elemento <p> con id="resultado" en lugar de reemplazarlo
+            document.getElementById("resultado").innerHTML +=`<p>El mes ${resulMes} está en la estación de ${resulEst}</p>`
+        }
+    </script>
+</body>
+
+</html>

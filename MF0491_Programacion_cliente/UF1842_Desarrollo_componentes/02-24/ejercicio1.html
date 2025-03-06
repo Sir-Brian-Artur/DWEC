@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            padding: 5px 10px;
+            background-color: darkblue;
+            color: white;
+            font-size: x-large;
+        }
+    </style>
+    <script>
+        function registro() {
+            var name, mail;
+            name = prompt("Nombre del usuario");
+            mail = prompt("Correo del usuario")
+            if (!name || !mail) {
+                document.write("te faltan datos");
+            } else {
+                document.write("<p>tu nombre es " + name + "<p>");
+                document.write("<p>tu mail es " + mail + "<p>");
+
+            }
+            
+        }
+        
+    </script>
+</head>
+<body>
+    <button onclick="registro()">Botón</button>
+</body>
+</html>

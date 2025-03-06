@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gimnasio Fit - Inicio</title>
+  <style>
+    /* Estilos generales del header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #222; /* Fondo oscuro */
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      transition: padding 0.3s ease, font-size 0.3s ease;
+      z-index: 1000;
+    }
+
+    /* Logo y navegación */
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff6347; /* Color de acento, por ejemplo, tomato */
+    }
+
+    /* Espaciado para evitar que el contenido quede oculto detrás del header */
+    .contenido {
+      margin-top: 80px;
+      padding: 20px;
+    }
+
+    /* Media Query: para dispositivos con ancho máximo de 768px */
+    @media (max-width: 768px) {
+      header {
+        padding: 10px 20px;
+      }
+      .logo {
+        font-size: 22px;
+      }
+      nav a {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Gimnasio Fit</div>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#clases">Clases</a>
+      <a href="#horarios">Horarios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <div class="contenido">
+    <h1>Bienvenido a Gimnasio Fit</h1>
+    <p>Contenido principal de la página...</p>
+    <!-- Resto del contenido -->
+  </div>
+</body>
+</html>

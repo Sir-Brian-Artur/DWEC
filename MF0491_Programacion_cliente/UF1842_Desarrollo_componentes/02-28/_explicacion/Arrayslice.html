@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="inicio">Incio:</label>
+    <input type="numero" id="inicio" placeholder="Inserta el indice de inicio">
+    <label for="fin">Fin:</label>
+    <input type="numero" id="fin" placeholder="Inserta el indice de inicio">
+    <button onclick="extraer()">Ejecutar</button>
+    <p id="resultado"></p>
+
+    <script>
+        let meses =["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+
+        document.getElementById("resultado").innerHTML = "Array original es: " + meses.join(", ");
+
+        function extraer(){
+            let inicio = parseInt(document.getElementById("inicio").value);
+            let fin= parseInt(document.getElementById("fin").value);
+
+            if ( inicio>=0 && fin <= meses.length && inicio < fin ){
+                
+                let subMeses = meses.slice(inicio,fin);
+
+                document.getElementById("resultado").innerHTML = "el nuevo array es: " + subMeses.join(", ");
+
+            } else{
+                alert(" Por favor, ingrese indices validos dentro del rango");
+            }
+
+        }
+    </script>
+</body>
+</html>

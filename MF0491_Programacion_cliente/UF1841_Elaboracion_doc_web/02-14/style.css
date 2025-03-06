@@ -1,0 +1,7 @@
+div p{
+    color: blueviolet;
+    font-size: 1.5rem;
+}
+div > p{
+    font-style: italic;
+}

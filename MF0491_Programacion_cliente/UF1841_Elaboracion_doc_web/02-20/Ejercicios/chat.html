@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Imágenes</title>
+    <style>
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 10px;
+        }
+        .gallery-item {
+            flex: 1 1 calc(25% - 10px);
+            text-align: center;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h2>Galería de Imágenes</h2>
+    <div class="gallery-container">
+        <div class="gallery-item">
+            <a href="imagen1.jpg" target="_blank" onclick="openImage(event, 'imagen1.jpg', 'Descripción de la imagen 1')">
+                <img src="imagen1_thumb.jpg" alt="Imagen 1">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="imagen2.jpg" target="_blank" onclick="openImage(event, 'imagen2.jpg', 'Descripción de la imagen 2')">
+                <img src="imagen2_thumb.jpg" alt="Imagen 2">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="imagen3.jpg" target="_blank" onclick="openImage(event, 'imagen3.jpg', 'Descripción de la imagen 3')">
+                <img src="imagen3_thumb.jpg" alt="Imagen 3">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="imagen4.jpg" target="_blank" onclick="openImage(event, 'imagen4.jpg', 'Descripción de la imagen 4')">
+                <img src="imagen4_thumb.jpg" alt="Imagen 4">
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function openImage(event, imageUrl, description) {
+            event.preventDefault();
+            const newWindow = window.open('', '_blank');
+            newWindow.document.write(`
+                <html>
+                <head>
+                    <title>Imagen</title>
+                </head>
+                <body style="text-align: center; font-family: Arial, sans-serif;">
+                    <h2>${description}</h2>
+                    <img src="${imageUrl}" style="max-width: 90%; height: auto;">
+                </body>
+                </html>
+            `);
+        }
+    </script>
+</body>
+</html>

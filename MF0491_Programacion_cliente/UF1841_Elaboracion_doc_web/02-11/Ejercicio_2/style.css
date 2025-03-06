@@ -1,0 +1,25 @@
+body{
+    max-width: 500px;
+    font-family: arial;
+}
+a, p{
+    font-size: 18px;
+}
+
+nav{
+    background-color: rgb(205, 205, 205) ;
+}
+img{
+    width: 48px;
+}
+
+.descarga{
+    background-color: rgb(49, 135, 49);
+    color: #fff;
+    font-family: lucida sans;
+    font-size: 22px;
+    border: 0;
+    border-radius: 8px;
+    padding: 8px 16px;
+    margin-left: 32px;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="color" placeholder="Ingrese un color">
+    <button id="verificar">Pulsar</button>
+    <p id="resultado"></p>
+    <script>
+        let boton = document.getElementById("verificar");
+        let resultado = document.getElementById("resultado");
+
+        boton.onclick = function(){
+            let color =document.getElementById("color").value;
+            
+            switch (color){
+                case "amarillo":
+                    resultado.textContent = "El día seleccionado es: Lunes"
+                    // Cambiamos los estilos del elemento "body"
+                    document.body.style.backgroundColor = "#FFDDC1";
+                break;  
+                case "rojo":
+                    resultado.textContent = "El día seleccionado es: Martes"
+                    document.body.style.backgroundColor = "#FFDD700";
+                break;   
+                case "azul":
+                    resultado.textContent = "El día seleccionado es: Miercoles"
+                    document.body.style.backgroundColor = "#ADD8E6";
+                break;  
+                case 4:
+                    resultado.textContent = "El día seleccionado es: jueves "
+                    document.body.style.backgroundColor = "#90EE90";
+                break;
+                case 5:
+                    resultado.textContent = "El día seleccionado es: Viernes "
+                    document.body.style.backgroundColor = "#FFA07A";
+                break;  
+                case 6:
+                    resultado.textContent = "El día seleccionado es:  sabado";
+                    document.body.style.backgroundColor = "#9370DB";
+                break; 
+                case 7:
+                    resultado.textContent = "El día seleccionado es: Domingo"
+                    document.body.style.backgroundColor = "#FF4500";
+                break;
+               default:
+                    resultado.textContent = "Por favor introduce un numero entre 1 y 7"
+                    document.body.style.backgroundColor = "#FFFFFF";
+                 
+            }
+           
+
+        };
+
+    </script>
+</body>
+</html>

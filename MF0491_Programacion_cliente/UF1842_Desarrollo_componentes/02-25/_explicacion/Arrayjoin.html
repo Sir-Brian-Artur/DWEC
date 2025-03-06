@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Presiona el botón para eliminar el ultimo elemento del array y mostrar el resultado</p>
+    <button onclick="elimUltElemen()">Eliminar</button>
+    <p id="resultado"></p>
+    <script>
+        let frutas = ["manzana","pera", "mango", "cereza", "durazno", "piña", "uva"];
+        document.getElementById("resultado").innerHTML = frutas.join(" - ");
+//Lo primero que se muestra es hasta aqui
+// Una vez que se ejecuta la funcion lo que esta dentro, machaca lo anterior
+        function elimUltElemen(){
+            let eliminado = frutas.pop();
+
+            document.getElementById ("resultado").innerHTML= "<p>El elemento elminado es: "+eliminado+"</p> <p>El Array actualizado: "+frutas.join(", ")+"</p>";
+
+        }
+
+
+    </script>
+</body>
+</html>

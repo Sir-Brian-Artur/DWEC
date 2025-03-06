@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería con Escala en Article</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Estilos para la galería */
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Estilos para cada artículo de la galería */
+        article {
+            margin: 10px;
+            border: 2px solid #ccc;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            /* Se agrega una transición suave tanto para el escalado como para el cambio de color del borde */
+        }
+
+        /* Estilos para los enlaces */
+        a {
+            display: block;
+        }
+
+        /* Estilos para las imágenes */
+        img {
+            display: block;
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        /* Pseudoclase :link */
+        a:link article {
+            border-color: #007bff; /* Azul */
+        }
+
+        /* Pseudoclase :visited */
+        a:visited article {
+            border-color: #800080; /* Morado */
+        }
+
+        /* Pseudoclase :hover (efecto de escala en el article) */
+        a:hover article {
+            border-color: #28a745; /* Verde */
+            transform: scale(1.8); /* Efecto de zoom en el contenedor completo */
+            z-index: 10; /* Se agrega para evitar que se oculte detrás de otros elementos */
+        }
+
+        /* Pseudoclase :active */
+        a:active article {
+            border-color: #dc3545; /* Rojo */
+        }
+
+        /* Pseudoclase :focus */
+        a:focus article {
+            outline: 2px solid #ffc107; /* Amarillo */
+        }
+    </style>
+</head>
+<body>
+    <h1>Galería con Escala en Article</h1>
+
+    <section>
+        <a href="imagen.jpg">
+            <article>
+                <img src="imagen.jpg" alt="Imagen 1">
+            </article>
+        </a>
+
+        <a href="imagen2.jpg">
+            <article>
+                <img src="imagen2.jpg" alt="Imagen 2">
+            </article>
+        </a>
+
+        <a href="imagen3.jpg">
+            <article>
+                <img src="imagen3.jpg" alt="Imagen 3">
+            </article>
+        </a>
+
+        <a href="imagen4.jpg">
+            <article>
+                <img src="imagen4.jpg" alt="Imagen 4">
+            </article>
+        </a>
+
+        <a href="imagen5.jpg">
+            <article>
+                <img src="imagen5.jpg" alt="Imagen 5">
+            </article>
+        </a>
+    </section>
+
+</body>
+</html>

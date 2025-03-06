@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="indice">Indice:</label>
+    <input type="number" id="indice" placeholder="Agrega la posicion">
+    <label for="cantidad">Cantidad:</label>
+    <input type="number" id="cantidad" placeholder="Cantidad a borrar">
+    <label for="nuevoElemento">Añadir:</label>
+    <input type="text" id="nuevoElemento" placeholder="Añadir (opcional)">
+
+    <button onclick="modificar()">Modificar Array</button>
+    <p id="resultado"></p>
+
+    <script>
+        let colores = ["rojo", "amarillo", "verde", "azul", "violeta", "blanco", "negro", "gris"];
+
+        document.getElementById("resultado").innerHTML = "Array original: "+colores.join(" ");
+
+        function modificar(){
+            let indice = parseInt(document.getElementById("indice").value)
+            let cantidad = parseInt(document.getElementById("cantidad").value)
+            let nuevoElemento = document.getElementById("nuevoElemento").value;
+
+            if (indice >=0 && indice < colores.length){
+                let eliminados;
+                if (nuevoElemento!== ""){
+                    eliminados = colores.splice(indice,cantidad,nuevoElemento);
+                }else{
+                    eliminados = colores.splice(indice,cantidad);
+                }
+                document.getElementById("resultado").innerHTML = "Elementos eliminados: " +(eliminados.length >0 ? eliminados.join(","):"Ningun valor elimiminado") + "</br>Mi array actualizado es: "+colores.join(" - ");
+            }else{
+                alert("introduce un indice valido")
+            }
+        }
+    </script>
+</body>
+</html>

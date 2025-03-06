@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="number">
+    <button onclick="comprobar()">Botón</button>
+    <script>
+        function comprobar() {
+            let i = 0;
+            let num = document.getElementById("number").value;;
+            
+                while (isNaN(num) || num <= 100) {
+                    console.log(num);
+                    num++;
+                
+            }
+        }
+    </script>
+</body>
+
+</html>

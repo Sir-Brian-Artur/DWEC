@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 20% 200px 2fr;
+            gap: 10px;
+        }
+        .grid-item {
+            display: flex;          /* Alinear texto dento de un grid */
+            align-items: center;
+            justify-content: center;
+            padding: 8%;
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h2>Frutas</h2>
+    <div class="grid-container">
+        <div class="grid-item">Manzana</div>
+        <div class="grid-item">Banana</div>
+        <div class="grid-item">Cereza</div>
+        <div class="grid-item">Durazno</div>
+        <div class="grid-item">Fresa</div>
+        <div class="grid-item">Uva</div>
+        <div class="grid-item">Kiwi</div>
+        <div class="grid-item">Mango</div>
+        <div class="grid-item">Naranja</div>
+        <div class="grid-item">Pera</div>
+    </div>
+</body>
+</html>

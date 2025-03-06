@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var name;
+        var telf
+        alert('Bienvenido a Páginas 2030');
+        name = prompt("¿Cómo te llamas?");
+        telf = prompt("Número de teléfono?")
+
+        if (!name || !telf) {
+            alert("Te faltan datos por ingresar")
+        } else {
+            // podemos usar ${ } para icorporar variables en string
+            document.write(`<p>Hemos asocioda tu teléfono ${telf} a ${name} para próximas comunicaciones<p>`);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

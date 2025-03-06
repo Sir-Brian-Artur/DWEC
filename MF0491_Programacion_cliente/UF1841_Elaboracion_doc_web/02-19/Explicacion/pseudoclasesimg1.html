@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Imágenes Semántica</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Estilos para la galería */
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* Estilos para cada artículo de la galería */
+        article {
+            margin: 10px;
+            border: 2px solid #ccc;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Estilos para los enlaces */
+        a {
+            display: block;
+        }
+
+        /* Estilos para las imágenes */
+        img {
+            display: block;
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        /* Pseudoclase :link */
+        a:link {
+            border-color: #007bff; /* Azul */
+        }
+
+        /* Pseudoclase :visited */
+        a:visited {
+            border-color: #800080; /* Morado */
+        }
+
+        /* Pseudoclase :hover */
+        a:hover {
+            border-color: #28a745; /* Verde */
+        }
+
+        /* Efecto de zoom en las imágenes al pasar el ratón */
+        a:hover img {
+            transform: scale(1.8);
+        }
+
+        /* Pseudoclase :active */
+        a:active {
+            border-color: #dc3545; /* Rojo */
+        }
+
+        /* Pseudoclase :focus */
+        a:focus {
+            outline: 2px solid #ffc107; /* Amarillo */
+        }
+    </style>
+</head>
+<body>
+    <h1>Galería de Imágenes Semántica</h1>
+
+    <section>
+        <article>
+            <a href="imagen.jpg">
+                <img src="imagen.jpg" alt="Imagen 1">
+            </a>
+        </article>
+
+        <article>
+            <a href="imagen2.jpg">
+                <img src="imagen2.jpg" alt="Imagen 2">
+            </a>
+        </article>
+
+        <article>
+            <a href="imagen3.jpg">
+                <img src="imagen3.jpg" alt="Imagen 3">
+            </a>
+        </article>
+
+        <article>
+            <a href="imagen4.jpg">
+                <img src="imagen4.jpg" alt="Imagen 4">
+            </a>
+        </article>
+
+        <article>
+            <a href="imagen5.jpg">
+                <img src="imagen5.jpg" alt="Imagen 5">
+            </a>
+        </article>
+    </section>
+
+</body>
+</html>

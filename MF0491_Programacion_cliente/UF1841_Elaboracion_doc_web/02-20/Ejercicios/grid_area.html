@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 1.4rem;
+        }
+        .contenedor{
+            display: grid;
+            width: 80%;
+            max-width: 800px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 100px 200px 100px ;
+            grid-template-areas: 
+                "logo header header"
+                "sidebar main main"
+                "footer footer whatsapp";
+            gap: 10px;
+            background-color: #ddd;
+            padding: 10px;
+        }
+        .item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .logo{
+            background-color: bisque;
+            grid-area: logo;
+        }
+        .header{
+            background-color: chocolate;
+            grid-area: header;
+        }
+        .sidebar{
+            background-color: cornflowerblue;
+            grid-area: sidebar;
+        }
+        .main{
+            background-color: yellowgreen;
+            grid-area: main;
+        }
+        .footer{
+            background-color: darkmagenta;
+            grid-area: footer;
+        }
+        .whatsapp{
+            background-color: green;
+            grid-area: whatsapp;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="item logo">logo</div>
+        <div class="item header">header</div>
+        <div class="item sidebar">sidebar</div>
+        <div class="item main">main</div>
+        <div class="item footer">footer</div>
+        <div class="item whatsapp">whatsapp</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Imágenes</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .gallery a {
+            display: block;
+            margin: 10px;
+            border: 2px solid #ccc;
+            overflow: hidden;
+            /* overflow: hidden;: Oculta cualquier contenido que se desborde del enlace. Esto es útil para evitar que las imágenes se salgan del borde*/
+            position: relative;
+        }
+        
+        .gallery img {
+            display: block;
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            /* object-fit: cover;: Ajusta las imágenes para que cubran completamente el área asignada, recortando si es necesario para mantener la proporción. */
+            transition: transform 0.3s ease;
+            /* transition: transform 0.3s ease;: Agrega una transición suave al efecto de transformación (escalado) que se aplicará en el hover.*/
+        }
+
+        /* Pseudoclase :link: aplica estilos a los enlaces no visitados */
+        .gallery a:link {
+            border-color: #007bff; /* Azul */
+        }
+
+        /* Pseudoclase :visited: aplica estilos a los enlaces visitados */
+        .gallery a:visited {
+            border-color: #800080; /* Morado */
+        }
+
+        /* Pseudoclase :hover: aplica estilos al pasar el ratón por encima del enlace */
+        .gallery a:hover {
+            border-color: #28a745; /* Verde */
+        }
+
+        .gallery a:hover img {
+            transform: scale(1.1);
+            /* transform: scale(1.1);: Escala las imágenes al 110% de su tamaño original, creando un efecto de zoom. */
+        }
+
+        /* Pseudoclase :active: aplica estilos al hacer clic en el enlace */
+        .gallery a:active {
+            border-color: #dc3545; /* Rojo */
+        }
+
+        /* Pseudoclase :focus: aplica estilos al enfocar el enlace (con teclado) */
+        .gallery a:focus {
+            outline: 2px solid #ffc107; /* outline: 2px solid #ffc107;: Agrega un contorno amarillo de 2 píxeles alrededor de los enlaces cuando tienen el foco.
+            - border: Afecta el tamaño total del elemento. El borde se suma al ancho y alto del elemento, lo que puede desplazar otros elementos en la página.
+            - outline: No afecta el tamaño del elemento. Se dibuja fuera del borde, por lo que no cambia el diseño de la página. */
+        }
+    </style>
+</head>
+<body>
+    <h1>Galería de Imágenes</h1>
+
+    <div class="gallery">
+        <a href="imagen.jpg">
+            <img src="imagen.jpg" alt="Imagen 1">
+        </a>
+        <a href="imagen2.jpg">
+            <img src="imagen2.jpg" alt="Imagen 2">
+        </a>
+        <a href="imagen3.jpg">
+            <img src="imagen3.jpg" alt="Imagen 3">
+        </a>
+        <a href="imagen4.jpg">
+            <img src="imagen4.jpg" alt="Imagen 4">
+        </a>
+        <a href="imagen5.jpg">
+            <img src="imagen5.jpg" alt="Imagen 5">
+        </a>
+    </div>
+</body>
+</html>

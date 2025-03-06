@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- placeholder es el texto gris que aparece en el cajón de escritura -->
+    <input type="number" id="number" placeholder="Número">
+    <button onclick="obtenerValor()">click</button>
+    <p id="resultado"></p>
+    <script>
+        // compara si n es +, -, o 0
+        function obtenerValor() {
+            // Obtiene el valor como string
+            let value = document.getElementById("number").value;  
+            let num = parseFloat(value); // Convierte a número
+            let resul;
+
+            if (isNaN(num)) {   // Comprueba si es un número o no
+                resul = "Por favor, ingrese un número válido.";
+            } else if (num > 0) {
+                resul = "El número es positivo"
+            } else if (num < 0){
+                resul = "El número es negativo";
+            } else {
+                resul = "El número es cero"
+            }
+            // Muestra el mensaje por consola
+            console.log(resul);     
+            // Muestra el resultado en el <p> con id="resultado"
+            document.getElementById("resultado").innerHTML = resul; 
+        }
+    </script>
+</body>
+
+</html>

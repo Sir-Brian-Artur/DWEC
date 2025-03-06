@@ -1,0 +1,58 @@
+<!-- Etiquetas aceptadas:                                                       -->
+<!-- h1, h2, h3, h4, h5, h6                     títulos                         -->
+<!-- <p>                                        párrafos                        -->
+<!-- <br>,<br/>                                 salto de línea html5, xhtml     -->
+<!-- <blockquote cite=" ">                      cita referenciada               -->
+<!-- <hr>,<hr/>                                 línea horizontal html5, xhtml   -->
+<!-- <abbr title="">                            abrebiatura                     -->
+<!-- <sup>,                                     Superíndice                     -->
+<!-- <sub>                                      Subíndice                       -->
+<!-- <u>                                        Anotaciones no textuales        -->
+<!-- <b>, <strong>                              negritas                        -->
+<!-- <cite>, <i>, <em>                          itálicas                        -->
+<!-- <bdo dir="rlt">                            dirección del text              -->
+<!-- <code>                                     ejemplo de código               -->
+<!-- <pre>                                      preformateado                   -->
+<!-- <del>, <s>                                 texto tachado                   -->
+<!-- <big>                                      incremento de tamaño de fuente  -->
+
+    <!-- Etiquetas deprecated (en deshuso)                                      -->
+    <!-- <small>, <center>, <strike>                                            -->
+<!-- OBSERVACIONES: en ocaciones es difícil saber si una etiqueta es deprecated o
+no, por eso conviene revisar el stándard html del momento. Por ejemplo la etiqueta <s>
+era deorecated en xhtml y sin embargo en hatml5 se vuelve a dar por buena -->
+
+<p>Comenzaremos probando las etiquetas, como veís todo lo que esta dentro de esta etiqueta corresponde a un párrafo</p>
+<h1>Este es un título en <b>h1</b></h1>
+<h2>Este es un título en <b>h2</b></h2>
+<h3>Este es un título en <b>h3</b></h3>
+<h4>Este es un título en <b>h4</b></h4>
+<h5>Este es un título en <b>h5</b></h5>
+<h6>Este es un título en <b>h6</b></h6>
+<br> hacemos un salto de línea. Pero cuando hablamos de xhtml todas las etiquetas deben ser cerradas si o si <br/>esta es la forma de crear el salto de línea en xhtml, donde la barra ya indica el cierre
+<blockquote cite="http://wwww.metodogrupo.com">Cita con la url a la cual se hace referecia</blockquote>
+<p>Otra manera de crear una cita es dentro de un párrafo, y cuando queremos citar como si lo hicieramos entrecomillados escribimos la cita así: <blockquote>"Y dentro de la etiqueta blockquote, escribimos el texto a citar"</blockquote>Todo lo que quede fuera de blockquote pertenece al párrafo</p>
+<hr>
+<p>hr/ hace lo mismo pero es obligatorio con ese formato en xhtml</p>
+<hr/> 
+<p>La <abbr title="Señora">Sra.</abbr> Maria Martinez estudió en la Escuela de Música de Vigo.</p>
+<p>La <abbr title="Organización Internacional de Normalización">ISO</abbr> es el organismo encargado de promover el desarrollo de normas internacionales de fabricación (tanto de productos como de servicios), comercio y comunicación para todas las ramas industriales.</p>
+<p>En este párrafo podemos apreciar el superíndice utilizando la etiqueta sup <sup>Superíndice</sup> y el subíndice usando la etiqueta sub <sub>Subíndice</sub></p>
+<p>Cancer, también conocido como tumor <u>malino</u>, es un grupo de <u>efermedades</u> que involucran al crecimiento anormal de células con el potencial de invadir o desplazarse a otras partes del cuerpo.</p>
+<!-- El ejemplo anterior muestra en web un documento producido como salida de una revisión ortográfica-->
+<p><b>La mañana se había levantado clara y fría</b>, con una frescura que evidenciaba el fin del <strong>verano</strong>. Partieron al amanecer para ver la decapitación de un hombre, los veinte, y Bran cabalgó entre ellos, nervioso y con exitación.</p>
+<!-- El ejemplo anterior tanto b como strong se muestran en negritas. 
+    Solo que strong se debe utilizar para hacer énfasis en un texto a partir de HTML5, 
+    para efectos de accesibilidad y b solo es visual-->
+<p>Ellos eran un profesor francés, su sirviente, y un pescador canadiense. Estos tres hombres han sido lanzados fuera de borda por una colisión que tuvo lugar entre el <i>Nautilus</i> y la fragata estadounidense <em>Abraham Lincoln</em>, que lo estaba persiguiendo.</p>
+<!-- al igual que con el ejemplo de b y strong, en este caso i es meramente estético y 
+em marca el énfasis en la palabra de modo que puedan ser interpresados por dispositivos con apoyo de voz-->
+<p>Cuatro años despuñes, Asimov añadió aún otra secuela, <cite>Fundación y Tierra</cite> (1986), la cual fue seguida por las precuelas <cite>Preludio a la Fundación</cite> (1988) y <cite>Hacia la Fundación</cite> (1993).</p>
+<!-- Con cite existen diferencias de opiniones entre editores, algunos dicen que es para nombrar autores y otros para citar texto,
+incluso hay quienes lo confunden con blockquote.
+<cite> se visualiza en cursiva por defecto, pero no se debe emplear con el único propósito de mostrar un texto en cursiva. 
+Para ello se debe emplear <em> o <i>. Si no se quiere que se muestre en cursiva se puede emplear CSS para modificar su aspecto.
+<cite> debe contener el nombre de una obra creativa, no el nombre de una persona.-->
+<p>Podemos estar nuevamente en una de esas situaciones que la frase <bdo dir="rtl">ידיעת שפה אחת אינה מספיקה</bdo> describe mejor.</p>
+<!-- En este caso RTL lo que hace es cambiar el orden de las palabras escribiendolas de derecha a izquierda
+                                                     quedando la frase escrita así ידיעת שפה אחת אינה מספיקה-->

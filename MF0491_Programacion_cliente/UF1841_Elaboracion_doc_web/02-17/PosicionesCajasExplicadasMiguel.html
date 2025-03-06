@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*PON IMAGENES. LA ULTIMA MEJOR SI ES DE 200PX X 200PX PARA QUE SE VEA COMPLETA*/
+        /*ESPERA PARA METER LA PROPIEDAD OVERFLOW HASTA QUE PONGAS LA CAJA CON FLOAT PARA VER LO QUE HACE*/
+        section {
+            margin: 5rem;
+            overflow: hidden; /*CON LA PROPIEDAD FLOAT LA CAJA PADRE PUEDE COLAPSAR. POR ESO LE PUSE UN overflow: hidden PARA IMPEDIR QUE COLAPSEN LAS SECCIONES
+            
+            La propiedad overflow controla cómo se comporta el contenido cuando se desborda del contenedor.
+            overflow: hidden; oculta cualquier contenido que se salga del área del elemento.
+
+            */
+        }
+
+
+    
+        /* POSITION STATIC:
+
+        Es el valor por defecto de la propiedad position en CSS. Esto significa que el elemento se coloca en el flujo normal del documento y no es afectado por propiedades como top, right, bottom o left.
+        
+        ¿Cuándo usar position: static?
+        Normalmente no necesitas escribir position: static;, ya que es el valor predeterminado. Sin embargo, podría ser útil si un elemento ha sido cambiado a relative, absolute o fixed y quieres restablecerlo a su comportamiento normal.
+        */
+        .box {
+            position: static; /* Esto es lo mismo que no poner position */
+            bottom: 0; /* NO tendrá efecto */
+            min-height: 100px;
+            min-width: 100px;
+            background-color: rgb(122, 0, 0);
+            color: white;
+        }
+
+
+
+        /* FLOAT:
+        
+        float no es un valor de la propiedad position.
+
+        float es una propiedad independiente en CSS que se usa para colocar elementos a un lado (izquierda o derecha) y permitir que el contenido siguiente fluya a su alrededor.
+
+        Por ejemplo si lo aplicas sobre una imagen, la imagen se alinea a la izquierda/derecha y el texto fluye a su alrededor.
+
+        ¿Cuándo usar float hoy en día?
+        Aunque antes se usaba mucho para crear layouts, hoy en día es mejor usar Flexbox o CSS Grid, que son más modernos y potentes. Pero float sigue siendo útil para cosas específicas, como envolver texto alrededor de imágenes.
+        */
+        .elemento {
+            background-color: #000033;
+            min-height: 100px;
+            min-width: 100px;
+            float: left;
+        }
+        .otroElemento {
+            background-color: blueviolet;
+            min-height: 100px;
+            min-width: 100px;
+            float: right;
+        }
+        .imagen {
+            float: left;
+            margin-right: 2rem;
+        }
+
+        /* POSITION FIXED:
+
+        La propiedad position: fixed; se usa para fijar un elemento en la pantalla, sin importar el desplazamiento (scroll) del usuario. Esto significa que el elemento permanecerá en la misma posición siempre, sin moverse con el contenido de la página.
+        
+            - Se posiciona en relación con la ventana del navegador (viewport), no con su contenedor.
+            - No se ve afectado por el scroll, siempre permanece en la misma posición.
+            - Puedes moverlo con top, bottom, left y right.
+            - Se saca del flujo normal del documento (otros elementos se comportan como si no existiera).
+        
+        ¿Cuándo usar position: fixed?
+
+            📌 Menús de navegación en un header fijo (header siempre visible).
+            📍 Botones flotantes (como el botón de "Subir arriba").
+            🔔 Notificaciones o banners informativos.
+            📝 Ventanas emergentes (pop-ups no modales).
+        
+        */
+        .elementoFijo {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            background-color: forestgreen;
+            min-width: 300px;
+            min-height: 200px;
+        }
+
+
+        /* POSITION ABSOLUTE:
+
+        La propiedad position: absolute; se usa para posicionar un elemento de forma precisa en la página, eliminándolo del flujo normal del documento.
+
+        - Se posiciona en relación con su ancestro más cercano que tenga position: relative/fixed, si no hay   ninguno, se posiciona respecto al <html>.
+        - Puedes moverlo con top, bottom, left, y right.
+        - No ocupa espacio en el diseño normal, otros elementos actúan como si no existiera.
+        - Útil para colocar elementos superpuestos o ajustar su ubicación exacta.
+        */
+
+        .elementoAbsoluto {
+            position: absolute;
+            bottom: 10%;
+            left: 0%;
+            background-color: #ffbebe;
+            width: 100px; /*TAMBIEN LOS PODRIA PONER EN % Y FUNCIONAN RESPECTO AL DIV PADRE*/
+            height: 100px;
+        }
+        .imagenBadge {
+            position: relative; /* Define el contenedor "padre" para la position: absolute */
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+        }
+        .badge {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        background: red;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">CAJA CON POSITION: static</div>
+    <section>
+        <h2>DIVS AMBOS CON FLOAT</h2>
+        <div class="elemento"></div>
+        <div class="otroElemento"></div>
+    </section>
+    <section>
+        <h2>IMAGEN CON FLOAT - RESTO DEL CONTENIDO DE LA SECCION SIN FLOAT</h2>
+        <img src="/Repaso/sem1/imagen-300.jpg" alt="Ejemplo" class="imagen">
+        <p>Este es un párrafo que rodea la imagen gracias a la propiedad float.</p>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio doloremque soluta ea aperiam quam laudantium optio commodi, error ullam molestiae nemo voluptatibus similique nostrum sit, praesentium quo corrupti incidunt perspiciatis!
+        </p>
+
+        <p>
+            Soluta odio quia ipsam porro illo, vero, nobis repellendus quis unde amet ad. Quaerat officia odio nobis aperiam adipisci quae nam? Iure error officia cupiditate aspernatur libero, accusantium sunt consequatur.
+        </p>
+
+        <p>
+            Error unde animi voluptatem officiis autem facere. Atque, illum rem? Laboriosam inventore pariatur dolores accusantium nesciunt in necessitatibus cupiditate ea cumque tempora deserunt aspernatur molestias odit, dolor dignissimos beatae labore.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate vero sapiente corporis a reiciendis doloremque, ipsa nostrum nam sequi adipisci voluptatibus ipsum excepturi, error, ea eius molestiae? Rerum, illum maiores!
+            Quia accusamus ipsum veniam! Magni libero nisi quo neque unde voluptatibus provident impedit nulla, fugiat saepe ea deleniti id, laudantium maxime nobis quisquam veritatis hic ipsa omnis quis repellat perferendis.
+            Iure provident dolores, ratione eos quidem molestiae a perspiciatis consectetur corporis perferendis dicta dolorem voluptatem quos? Sint laboriosam, nisi cupiditate omnis culpa, debitis quo repellendus soluta deleniti enim voluptatibus quaerat?
+        </p>
+    </section>
+    <section>
+        <div class="elementoFijo">
+            <div class="elementoAbsoluto">
+                <p>ABSOLUTO</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>Ejemplo: Crear un "Badge" en una imagen</h2>
+        <div class="imagenBadge">
+            <img src="/Repaso/sem1/imagen-300.jpg" alt="Producto">
+            <div class="badge">Nuevo</div>
+        </div>
+    </section>
+</body>
+</html>

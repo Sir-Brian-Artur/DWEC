@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenedor{
+            display: flex;
+            border: 2px solid black;
+            margin-bottom: 20px;
+        }
+        .item{
+            background-color: cadetblue;
+            padding: 20px;
+            margin: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>flex-direction: row dirección flex por defecto row</h2>
+    <div class="contenedor" style="flex-direction: row-reverse;">
+        <div class="item">row: se colocan los item en fila de izquierda a derecha</div>
+        <div class="item">row-revers: se colocan los item en fila de de derecha a izquierda</div>
+        <div class="item">controla la dirección en horizontal</div>
+    </div>
+
+    <h2>flex-direction; column</h2>
+    <div class="contenedor" style="flex-direction: column;">
+        <div class="item">Controla la direccion en forma vertical</div>
+        <div class="item">column: los items se colocan uno debajo del otro</div>
+        <div class="item">colum-reverse igual que column, el ultimo es el primero en aparecer</div>
+        
+    </div>
+    <h2>flex-wrap: wrap</h2>
+    <div class="contenedor" style="flex-wrap: wrap; width: 80%;">
+        <div class="item">Gestiona como se ralizarán los saltos de linea</div>
+        <div class="item">1 ahora en 80%</div>
+        <div class="item">1 ahora en 80%</div>
+        <div class="item">no-wrap: no realiza saltos de linea, reduciendo así el ancho de los items. Este es el valor por defecto</div>
+        <div class="item">2</div>
+        <div class="item">Wrap-reverse: el salto de linea se produce hacia arriba</div>
+        <div class="item">Este elemnto muestra como se van moviendo las filas</div>
+    </div>
+    <h2>justify-content: flex-star, coloca los elementos partiendo del inicio</h2>
+    <div class="contenedor" style="justify-content: flex-start;">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+    <h2>justify-content: center, coloca los elementos centrados</h2>
+    <div class="contenedor" style="justify-content: center;">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+    <h2>justify-content: space-between, reparte el espacio libre proporporcionalmente con el espacio entre los items, colocando el primero y el último pegado a los bordes</h2>
+    <div class="contenedor" style="justify-content: space-between;">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+    <h2>justify-content: space-around, distribuye los espacios entre items propoporcionalmente incluyendo al primero y al ultimo</h2>
+    <div class="contenedor" style="justify-content: space-around;">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+    <h2>justify-content: space-evenly, pero con espaciado perfectamente uniforme entr y alrededor de cada item</h2>
+    <div class="contenedor" style="justify-content: space-evenly;">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+
+    <h2>align-items: flex-start los alinia en la parte superior</h2>
+    <div class="contenedor" style="align-items: flex-start;">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+    
+    <h2>align-items: flex-start los alinea en la parte inferior</h2>
+    <div class="contenedor" style="align-items: flex-end; height: 150px;">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+
+    <div class="contenedor" style="align-items: center; height: 150px;">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+
+    <div class="contenedor" style="align-items: stretch; height: 150px;">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+
+    <div class="contenedor" style="align-items: baseline; height: 150px;">
+        <div class="item">1 un pequeño contenido a esta</div>
+        <div class="item">2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim totam maxime ipsum expedita, ipsa commodi itaque optio dolores quae maiores iusto et voluptatibus quo debitis. Ut corporis atque consequatur ducimus?</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gimnasio PowerFit</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>PowerFit</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#descripcion">Sobre Nosotros</a></li>
+                <li><a href="#horarios">Horarios</a></li>
+                <li><a href="#ejercicios">Ejercicios</a></li>
+                <li><a href="#monitores">Monitores</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Portada -->
+    <section id="inicio" class="portada">
+        <div class="portada-content">
+            <h2>Transforma tu cuerpo, transforma tu vida</h2>
+            <p>Únete a nuestro gimnasio y alcanza tus metas con nosotros.</p>
+            <a href="#contacto" class="btn">¡Únete ahora!</a>
+        </div>
+    </section>
+
+    <!-- Descripción del Gimnasio -->
+    <section id="descripcion" class="descripcion">
+        <h2>Sobre Nosotros</h2>
+        <p>En PowerFit nos dedicamos a ayudarte a alcanzar tus objetivos de fitness. Contamos con instalaciones modernas, equipos de última generación y un equipo de monitores profesionales que te guiarán en cada paso del camino.</p>
+    </section>
+
+    <!-- Horarios -->
+    <section id="horarios" class="horarios">
+        <h2>Horarios de Actividades</h2>
+        <table>
+            <tr>
+                <th>Actividad</th>
+                <th>Lunes - Viernes</th>
+                <th>Sábado</th>
+            </tr>
+            <tr>
+                <td>Yoga</td>
+                <td>8:00 - 9:00</td>
+                <td>10:00 - 11:00</td>
+            </tr>
+            <tr>
+                <td>Spinning</td>
+                <td>12:00 - 13:00</td>
+                <td>11:00 - 12:00</td>
+            </tr>
+            <tr>
+                <td>CrossFit</td>
+                <td>18:00 - 19:00</td>
+                <td>16:00 - 17:00</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Ejercicios -->
+    <section id="ejercicios" class="ejercicios">
+        <h2>Ejercicios Disponibles</h2>
+        <div class="ejercicios-grid">
+            <div class="ejercicio">
+                <h3>Cardio</h3>
+                <p>Mejora tu resistencia con nuestras máquinas de cardio de última generación.</p>
+            </div>
+            <div class="ejercicio">
+                <h3>Pesas</h3>
+                <p>Fortalece tus músculos con nuestra amplia variedad de pesas y máquinas.</p>
+            </div>
+            <div class="ejercicio">
+                <h3>Clases Grupales</h3>
+                <p>Participa en nuestras clases grupales y mantente motivado.</p>
+            </div>
+        </div>
+        <p class="plus">¡Contrata nuestro servicio Plus y obtén seguimiento personalizado!</p>
+    </section>
+
+    <!-- Monitores -->
+    <section id="monitores" class="monitores">
+        <h2>Nuestros Monitores</h2>
+        <div class="monitores-grid">
+            <div class="monitor">
+                <img src="monitor1.jpg" alt="Monitor 1">
+                <h3>Carlos Martínez</h3>
+                <p>Especialista en entrenamiento funcional.</p>
+            </div>
+            <div class="monitor">
+                <img src="monitor2.jpg" alt="Monitor 2">
+                <h3>Ana López</h3>
+                <p>Experta en nutrición y fitness.</p>
+            </div>
+            <div class="monitor">
+                <img src="monitor3.jpg" alt="Monitor 3">
+                <h3>Javier Gómez</h3>
+                <p>Entrenador personal con más de 10 años de experiencia.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contacto">
+        <h2>Contacto</h2>
+        <form action="#" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 PowerFit. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

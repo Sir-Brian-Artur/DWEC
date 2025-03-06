@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos del header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #e4eaed;
+    border-radius: 18px;
+}
+
+.logo img {
+    height: 50px; /* Ajusta según el tamaño de tu logo */
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links a {
+    color: #222;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.navbar .nav-links a:hover {
+    color: #2e50d9; /* Color al pasar el mouse */
+}
+
+h1{
+    color: #494a52;
+    font-size: 36px;
+    text-align: center;
+    margin: 42px 0px;
+}
+
+.champi{
+    width: 600px;
+}
+.galeria{
+    /* Todo se resume en colocar "wrap" cuando se emplee "flex" */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 12px;
+
+    border-radius: 18px;
+    background-color: #e4eaed;
+}
+.galeria a{
+    text-decoration: none;
+    font-weight: 600;
+}
+.card{
+    margin: 12px 8px;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px #a7a7a7;
+    background-color: #fff;
+}
+img{
+    border-radius: 12px;
+    max-width: 300px;
+}
+.name{
+    margin-top: 16px;
+    font-size: 1.4rem;
+    margin-left: 8px;
+    color: #313131;
+    margin-bottom: 5px;
+}
+
+
+/* Estilos del footer */
+.footer {
+    background-color: #6c6c6c;
+    color: #fff;
+    padding: 40px 10%;
+    text-align: center;
+}
+
+.footer-section h3 {
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #2e50d9;
+}
+
+.footer-section ul {
+    list-style: none;
+    display: flex;
+    gap: 12px;
+    justify-content: space-evenly;
+}
+/* Puedo incorporar estilos sólo al li, sin hacer mención a los enlaces */
+.footer-section ul li {
+    margin-block: 15px;
+}
+
+.social-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: #2e50d9;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ccc;
+}

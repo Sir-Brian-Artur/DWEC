@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Confirm</title>
+
+    <script>
+        function confirmar() {
+            var mensaje;
+            var opcion = confirm(`Eres mayor de edad?`); /* Devuelve Boolean */
+
+            if (opcion) {
+                mensaje = "Vale vale";
+            } else {
+                mensaje = "No puedes pasar";
+            }
+            document.getElementById("confirmacion").innerHTML = mensaje;    /* No olvidarse de las comillas, cuando hagamos referencia al id del elemento HTML */
+        }
+    </script>
+</head>
+<body>
+    <p id="confirmacion">Declaración de intención</p>
+    <button onclick="confirmar()">Mayor de edad</button>
+</body>
+</html>

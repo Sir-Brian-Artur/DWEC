@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #333;
+        }
+        .static{
+            background-color: aqua;
+            padding: 20px;
+        }
+        .float-left {
+            float: left;
+            width: 45%;
+            background-color: blueviolet;
+            padding: 20px;
+            margin-right: 5%;
+        }
+        .float-right{
+            float: right;
+            width: 45%;
+            background-color: chocolate;
+            padding: 20px;
+        }
+        .relative{
+            position: relative;
+            background-color: cornflowerblue;
+            padding: 20px;
+            margin-top: 10px;
+            left: 10px;
+        }
+        .absolute-caja{
+            position: relative;
+            height: 200px;
+            border: 1px solid black;
+            margin-top: 20px;
+        }
+        .absolute{
+            position: absolute;
+            background-color: darksalmon;
+            padding: 20px;
+            top:20px;
+            left:50px;
+        }
+        .fixed{
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: darkgreen;
+            padding: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <p>Ejemplo de un posicionamiento normal de las cajas static</p>
+        <article class="static">Para ver el finciomaiento de una caja normal</article>
+    </main>
+    <main class="container">
+        <article class="relative">Esta es una caja relativa</article>
+
+    </main>
+    <h2>Ejemplo de posicionamiento flotante</h2>
+    <main class="container">
+        <aside class="float-left">Caja flotante a la izquierda</aside>
+        <aside class="float-right">Caja flotante a la derrecha</aside>
+    </main>
+    <h2>Esta es una caja con posicionamiento absoluto</h2>
+    <main class="container absolute-caja">
+        <article class="absolute">Caja con posicionamiento absolute
+        </article>
+        
+    </main>
+    <h2>Ejemplo de 3 posicionamientos diferentes</h2>
+    <main class="container">
+       <article class="relative">Caja con posicionamiento relativo</article>
+       <article class="absolute">Caja con posicionamiento absolute</article>
+       <article class="fixed">Caja con posicionamiento fijo en la esquina inferior derecha</article>
+
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+    <style>
+        .container {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 100px 200px 100px;
+
+/* Sección de Media Queries dentro de la clase del contenedor */
+            @media (min-width : 1000px){
+                grid-template-areas:
+                    "head head"
+                    "main main"
+                    "foot foot";
+            }
+            @media (600px <= width <= 1000px) {
+                grid-template-areas:
+                    "menu menu"
+                    "main main"
+                    "foot foot";
+            }
+            @media (max-width : 600px){
+                grid-template-areas:
+                    "head head"
+                    "menu main"
+                    "foot foot";
+            }
+        }
+
+/* Sección de MEDIA QUERIES que contienen la clase del contenedor */
+        @media (min-width : 1000px) {
+            .container {
+                grid-template-areas:
+                    "head head"
+                    "main main"
+                    "foot foot";
+            }                       /* Es mejor opción en el caso de que */
+            .galeria {              /* necesitemos hacer cabios en varios */
+                display: none;      /* elementos del código */
+            }
+        }
+
+        @media (600px <= width < 1000px){
+            .container {
+                grid-template-areas:
+                    "menu menu"
+                    "main main"
+                    "foot foot";
+            }
+        }
+
+        @media (max-width : 600px) {
+            .container {
+                grid-template-areas:
+                    "head head"
+                    "menu main"
+                    "foot foot";
+            }
+        }
+
+        .item-1 {
+            grid-area: head;
+            background: blue;
+        }
+
+        .item-2 {
+            grid-area: menu;
+            background: red;
+        }
+
+        .item-3 {
+            grid-area: main;
+            background: green;
+        }
+
+        .item-4 {
+            grid-area: foot;
+            background: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item-1"></div>
+        <div class="item item-2"></div>
+        <div class="item item-3"></div>
+        <div class="item item-4"></div>
+    </div>
+</body>
+
+</html>

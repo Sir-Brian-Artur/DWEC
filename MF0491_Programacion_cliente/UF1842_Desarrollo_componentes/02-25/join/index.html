@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button type="button" onClick="agregarFrutas()">boton</button>
+    <p id="frutas"></p>
+    <script>
+        let frutas = ['manzana', 'banana', 'cereza'];
+        let resultado = frutas.join(' - '); // "resultado" es una cadena de texto
+        console.log(resultado);  // Imprime: "manzana - banana - cereza"
+        
+        function agregarFrutas() {
+            document.getElementById("frutas").appendChild(resultado)
+        }
+    </script>
+</body>
+
+</html>

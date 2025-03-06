@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="input" placeholder="Escribe algo">
+    <button onclick="comprobarValor()">click</button>
+    <p>
+    <p id="resultado"></p>
+    <p id="resEst"></p>
+    </p>
+
+    <script>
+        function comprobarValor() {
+            // Obtiene el valor como string
+            let mes = document.getElementById("input").value;
+            let mesMinus = mes.toLowerCase(); // Pasa a minusculas
+            let year = [
+                "diciembre", "enero", "febrero",
+                "marzo", "abril", "mayo",     
+                "junio", "julio", "agosto",
+                "septiembre", "octubre", "noviembre"
+            ];
+            let week = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"];
+
+            let i = 0
+            let encontrado = false;
+            while(i < year.length && !encontrado){
+                if (mesMinus == year[i]) {
+                    console.log("Está de año");
+                    encontrado = true; 
+                }
+                i++;
+            }
+
+            
+            if(year.indexOf(mesMinus) != -1 ){
+                console.log("Es un mes");
+            } else if(week.indexOf(mesMinus) != -1 ){
+                console.log("Es un día de la semana")
+            } else {
+                console.log("No existe")
+            }
+        }
+    </script>
+</body>
+
+</html>

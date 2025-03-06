@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log(parseInt("42"));      // 42 (Número entero)
+        console.log(parseInt("42.99"));   // 42 (Descarta los decimales)
+        console.log(parseInt("42px"));    // 42 (Se detiene en "px")
+        console.log(parseInt("px42"));    // NaN (No empieza con un número)
+        console.log(parseInt("1010", 2)); // 10 (Interpreta "1010" como binario)
+
+        console.log(parseFloat("42.99"));   // 42.99
+        console.log(parseFloat("42px"));    // 42
+        console.log(parseFloat("3.14abc")); // 3.14 (Se detiene en "abc")
+        console.log(parseFloat("abc3.14")); // NaN (No empieza con un número)
+
+        let jsonString = '{"nombre": "Juan", "edad": 30}';
+        let objeto = JSON.parse(jsonString);
+
+        console.log(objeto.nombre); // "Juan"
+        console.log(objeto.edad);   // 30
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

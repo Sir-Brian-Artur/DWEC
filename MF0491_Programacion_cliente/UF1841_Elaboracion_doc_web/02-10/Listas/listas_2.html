@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas Accesibles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h2 {
+            color: #0056b3;
+        }
+
+        ol, ul, dl {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin-bottom: 20px;
+        }
+
+        ol {
+            padding-left: 20px;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        dt {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        dd {
+            margin-left: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Lista de compras</h2>
+    <ol type="1" aria-label="Lista de compras">
+        <li>Pan</li>
+        <li>Patatas</li>
+        <li>Cebollas</li>
+        <li>Zanahorias</li>
+        <li>Pimientos</li>
+    </ol>
+
+    <h2>Países europeos</h2>
+    <ol type="a" aria-label="Lista de países europeos">
+        <li>Alemania</li>
+        <li>Austria</li>
+        <li>Bélgica</li>
+        <li>Croacia</li>
+        <li>Dinamarca</li>
+        <li>España</li>
+        <li>Francia</li>
+        <li>Irlanda</li>
+        <li>Italia</li>
+        <li>Suecia</li>
+    </ol>
+
+    <h2>Animales</h2>
+    <ul aria-label="Lista de animales">
+        <li>Perro</li>
+        <li>Gato</li>
+        <li>Rana</li>
+        <li>Medusa</li>
+        <li>Seta</li>
+    </ul>
+
+    <h2>Lenguajes web</h2>
+    <dl aria-label="Lista de lenguajes de programación">
+        <dt>HTML</dt>
+        <dd>Lenguaje de marcado que estructura el contenido web mediante etiquetas y atributos, facilitando la organización y semántica de la información.</dd>
+        <dt>CSS</dt>
+        <dd>Lenguaje de estilos que define la apariencia visual de páginas web, controlando diseño, colores, tipografías y la disposición de elementos.</dd>
+        <dt>JavaScript</dt>
+        <dd>Lenguaje de programación que añade interactividad y dinamismo a la web, permitiendo manipular elementos, gestionar eventos y realizar comunicaciones asíncronas.</dd>
+    </dl>
+
+</body>
+</html>

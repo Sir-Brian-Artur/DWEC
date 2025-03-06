@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item{
+            background: lightblue;
+            padding: 20px;
+            margin: 5px;
+            border: 2px solid blue;
+            width: 80%;
+        }
+        .contenedor-flex{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            background-color: blanchedalmond;
+            padding: 20px;
+            border: 2px solid black;
+        }
+        .contenedor-inlineflex{
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            background-color: aquamarine;
+            padding: 20px;
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+    <h2>Ejemplo de display flex</h2>
+    <div class="contenedor-flex">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+
+    <div class="contenedor-inlineflex">
+        <div class="item">1 </div>
+        <div class="item">2 </div>
+        <div class="item">3 </div>
+        <div class="item">4 </div>
+    </div>
+    <div style="display: inline-block; background: yellow; padding: 10px;">Texto al lado del inline-flex</div>
+</body>
+</html>

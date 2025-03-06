@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tarjetas de Comentarios</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    #cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 280px;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .card h2 {
+      margin-top: 0;
+    }
+    .card p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Comentarios</h1>
+  <div id="cards-container"></div>
+
+  <script>
+    // Array de 6 objetos con propiedades: nombre, fecha y comentario
+    const comentarios = [
+      { nombre: "Juan",   fecha: "2023-02-15", comentario: "Muy buen contenido." },
+      { nombre: "María",  fecha: "2023-02-16", comentario: "Me encantó el artículo." },
+      { nombre: "Carlos", fecha: "2023-02-17", comentario: "Informativo y claro." },
+      { nombre: "Ana",    fecha: "2023-02-18", comentario: "Esperando más actualizaciones." },
+      { nombre: "Pedro",  fecha: "2023-02-19", comentario: "Excelente redacción." },
+      { nombre: "Pedro",  fecha: "2023-02-19", comentario: "Excelente redacción." },
+      { nombre: "Pedro",  fecha: "2023-02-19", comentario: "Excelente redacción." },
+      { nombre: "Pedro",  fecha: "2023-02-19", comentario: "Excelente redacción." },
+      { nombre: "Luisa",  fecha: "2023-02-20", comentario: "Muy útil, gracias." }
+    ];
+
+    // Seleccionar el contenedor donde se mostrarán las tarjetas
+    const container = document.getElementById('cards-container');   // ABUELO
+
+    // Usar forEach para crear y mostrar cada tarjeta
+    comentarios.forEach(item => {
+      // Crear el elemento div para la tarjeta
+      const card = document.createElement('div');         // PADRE
+      // agregarle una clase para darle estilos
+      card.classList.add('card');
+
+      // Insertar el contenido HTML en la tarjeta
+      card.innerHTML = `                                <!-- PADRE -->
+        <h2>${item.nombre}</h2>                          <!-- HIJO -->
+        <p><strong>Fecha:</strong> ${item.fecha}</p>     <!-- HIJO -->
+        <p>${item.comentario}</p>                        <!-- HIJO -->
+      `;
+
+      // Agregar la tarjeta al contenedor
+      container.appendChild(card);                    // ABUELO <- PADRE 
+    });
+  </script>
+</body>
+</html>
