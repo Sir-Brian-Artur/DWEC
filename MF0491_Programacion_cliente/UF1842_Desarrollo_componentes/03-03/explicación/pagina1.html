@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="resultado"></div>
+
+    <script>
+        let parametros = window.location.search;
+        let urlparametro = new URLSearchParams(parametros);
+        let nombre = urlparametro.get("nombre");
+        let edad = urlparametro.get("edad");
+
+        let resultadototal = document.getElementById("resultado")
+        resultadototal.innerHTML = "<p>Nombre: "+ nombre+ "</p><p>Edad: "+ edad +"</p>"
+    </script>
+</body>
+</html>

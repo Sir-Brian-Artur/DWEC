@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="email" id="email" maxlength="50" minlength="15">
+    <button onclick="validar()">Enviar</button>
+    <p id="mensaje"></p>
+    <script>
+       function validar(){
+            let email = document.getElementById("email").value;
+            if (email == ""){
+                document.getElementById("mensaje").innerText = "El campo email no puede estar vacio"
+            }else{
+                document.getElementById("mensaje").innerText = "El email se ha enviado correctamente"
+            }
+
+
+        }
+    </script>
+</body>
+</html>

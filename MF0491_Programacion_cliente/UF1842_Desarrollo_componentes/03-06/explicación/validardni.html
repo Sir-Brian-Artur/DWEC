@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="dniIntro" placeholder="12345678L">
+    <button onclick="validar()">OK</button>
+    <p id="resultado"></p>
+
+    <script>
+        function validar(){
+            let dni = document.getElementById("dniIntro").value;
+            let regDni = /^[0-9]{8}[a-zA-Z]$/;
+
+            if (regDni.test(dni)){
+                document.getElementById("resultado").innerText = "El DNI introducido es válido"
+            }else{
+                document.getElementById("resultado").innerText = "El DNI introducido NO es válido"
+            }
+
+
+    }
+    </script>
+</body>
+</html>

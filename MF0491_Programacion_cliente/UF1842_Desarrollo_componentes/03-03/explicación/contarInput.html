@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="texto" oninput="contar()">
+    <p>Contador: <span id="contador">0</span></p>
+    <script>
+        function contar(){
+            let texto = document.getElementById("texto").value;
+            document.getElementById("contador").innerText = texto.length;
+
+        }
+
+    </script>
+</body>
+</html>

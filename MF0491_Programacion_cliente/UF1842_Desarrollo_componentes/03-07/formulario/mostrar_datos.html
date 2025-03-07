@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos Ingresados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .data-group {
+            margin-bottom: 15px;
+        }
+        .data-group label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Datos Ingresados</h1>
+    <div class="data-group">
+        <label>Nombre:</label>
+        <span id="nombre"></span>
+    </div>
+    <div class="data-group">
+        <label>Apellidos:</label>
+        <span id="apellidos"></span>
+    </div>
+    <div class="data-group">
+        <label>Edad:</label>
+        <span id="edad"></span>
+    </div>
+    <div class="data-group">
+        <label>Correo Electrónico:</label>
+        <span id="email"></span>
+    </div>
+    <div class="data-group">
+        <label>Contraseña:</label>
+        <span id="password"></span>
+    </div>
+
+    <script>
+        // Obtener los parámetros de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+
+        // Mostrar los datos en la página
+        document.getElementById('nombre').textContent = urlParams.get('nombre');
+        document.getElementById('apellidos').textContent = urlParams.get('apellidos');
+        document.getElementById('edad').textContent = urlParams.get('edad');
+        document.getElementById('email').textContent = urlParams.get('email');
+        document.getElementById('password').textContent = urlParams.get('password');
+    </script>
+</body>
+</html>
