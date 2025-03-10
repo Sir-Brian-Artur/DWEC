@@ -2,7 +2,9 @@
 let usuarios = [];
 
 // Función para manejar el envío del formulario
+
 document.getElementById('registroForm').addEventListener('submit', function(event) {
+
     event.preventDefault(); // Evita que el formulario se envíe
 
     // Obtener los valores del formulario
