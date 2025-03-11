@@ -1,4 +1,4 @@
-// Array para almacenar los usuarios registrados
+
 let usuarios = [];
 
 // Función para manejar el envío del formulario
