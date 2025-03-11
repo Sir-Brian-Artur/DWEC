@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Provincias de España</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 2rem;
+      background-color: #f9f9f9;
+    }
+    .btn {
+      padding: 0.5rem 1rem;
+      margin-bottom: 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 0.3rem;
+      cursor: pointer;
+    }
+    .card {
+      background: white;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin-bottom: 0.5rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .provincia {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <button class="btn" onclick="ordenarPorProvincia()">Ordenar por Provincia</button>
+  <div id="lista"></div>
+
+  <script>
+    // Datos base
+    let provincias = [
+      { provincia: "Madrid", capital: "Madrid", codigoPostal: "28001" },
+      { provincia: "Barcelona", capital: "Barcelona", codigoPostal: "08001" },
+      { provincia: "Valencia", capital: "Valencia", codigoPostal: "46001" },
+      { provincia: "Sevilla", capital: "Sevilla", codigoPostal: "41001" },
+      { provincia: "Zaragoza", capital: "Zaragoza", codigoPostal: "50001" }
+    ];
+
+      function ordenarLista() {
+      let lista = document.getElementById("lista");
+      lista.innerHTML = ""; // 
+      provincias.forEach(({ provincia, capital, codigoPostal }) => {
+        let div = document.createElement("div");    //Crear div padre
+        div.className = "card";       //Darle la clase .card
+        // 3 div hijos, dentro de ese .card
+        div.innerHTML = `         
+          <div class="provincia">${provincia}</div>
+          <div>Capital: ${capital}</div>
+          <div>Código Postal: ${codigoPostal}</div>
+        `;
+        lista.appendChild(div);
+      });
+    }
+
+    function ordenarPorProvincia() {
+      provincias.sort((a, b) => a.provincia.localeCompare(b.provincia));
+      ordenarLista();
+    }
+
+    ordenarLista();
+  </script>
+</body>
+</html>
