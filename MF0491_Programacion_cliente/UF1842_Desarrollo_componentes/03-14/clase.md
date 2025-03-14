@@ -1,30 +1,20 @@
-### Principios SOLID
-
+# Principios SOLID
 * Single : Una función debe hacer una única cosa; y que la haga bien.
-
 * Open/Close : Un agente externo no puede modificar lo que está está dentro de nustro código. Pero sí que puede nuestro código desde dentro puede aportar hacia fuera.
-
 * Liskov : Todo objeto tiene propiedades, y puede tener métodos:
   * Las propiedades se definen con sustantibos
   * Los métodos se 
-
 * Intefaz : Es mejor tener una interfaz pequeña que haga pequeñas cosas, que una muy grande.
-  
 * Abstración : Hacer que algo se condense en la información esencial.
 
-### Clean Code 
+# Clean Code 
 
 La nomenglatura del código fuente tiene que estar en inglés.
+
 ![alt text](CalculadoraBasica.svg)
 
-• "Me entiendes?" demuestra alarde de superioridad. Infravalora a quien está escuchando. En vez de eso decir "Me explico?"
-• Necesidades del profesor:
-    • Cuenta Gmail
-    • Cuenta ChatGPT
+> "Me entiendes?" *demuestra alarde de superioridad*. Infravalora a quien está escuchando. En vez de eso decir "Me explico?"
 
-Contacto Juan Carlos Varela Iglesias:
-- jc.foroxinnovacion@gmail.com
-- 604 03 95 94
 
 Mercados muy buenos para el mundo de la programación:
 
@@ -70,4 +60,5 @@ Arbol de directorios
 - git commit -m "Update file" : Para actualización de archivo
 - git reset --soft b6ed4525 : para volver a una versión anterior, sin destrucción
 - git reset --hard b6ed4525 : para volver a una versión anterior, con destrucción NO HACER NUNCA!!
+  
 ![alt text](git.svg)
