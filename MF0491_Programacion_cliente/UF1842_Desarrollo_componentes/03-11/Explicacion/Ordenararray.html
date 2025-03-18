@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
       margin: 2rem;
       background-color: #f9f9f9;
     }
+
     .btn {
       padding: 0.5rem 1rem;
       margin-bottom: 1rem;
@@ -19,6 +21,7 @@
       border-radius: 0.3rem;
       cursor: pointer;
     }
+
     .card {
       background: white;
       border-radius: 0.5rem;
@@ -26,12 +29,14 @@
       margin-bottom: 0.5rem;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
+
     .provincia {
       font-weight: bold;
       font-size: 1.2rem;
     }
   </style>
 </head>
+
 <body>
   <button class="btn" onclick="ordenarPorProvincia()">Ordenar por Provincia</button>
   <div id="lista"></div>
@@ -46,12 +51,13 @@
       { provincia: "Zaragoza", capital: "Zaragoza", codigoPostal: "50001" }
     ];
 
-      function ordenarLista() {
+    function ordenarLista() {
       let lista = document.getElementById("lista");
       lista.innerHTML = ""; // 
       provincias.forEach(({ provincia, capital, codigoPostal }) => {
         let div = document.createElement("div");    //Crear div padre
-        div.className = "card";       //Darle la clase .card
+        div.className = "card";                     //Darle la clase .card
+        
         // 3 div hijos, dentro de ese .card
         div.innerHTML = `         
           <div class="provincia">${provincia}</div>
@@ -70,4 +76,5 @@
     ordenarLista();
   </script>
 </body>
+
 </html>
